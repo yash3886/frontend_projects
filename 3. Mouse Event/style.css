@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightsteelblue;
+  color: darkred;
+  max-height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse-box {
+  border: 2px solid darkorange;
+  margin: 40px;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.mouse-box h4 {
+  position: absolute;
+  /* Isse h4 ki position fix ho jayegi aur iske relative jo bhi honge woh isse refernece leke apni position decide karenge*/
+  font-size: 20px;
+  top: -60px; /* Yeh use kiya hai text ko dabbe ke bahar likhne ke liye*/
+  left: 50%;
+  transform: translateX(-50%);
+  /* Yeh use kiya hai upar waale text ko center me align karne ke liye*/
+  white-space: nowrap;
+  /* Yeh use kiya hai taaki jo text hai woh ek hi line me aaye do lines me split na ho*/
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* This is used to align the boxes one over the other when screen size is less than 600px */
+  }
+}
